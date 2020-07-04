@@ -66,3 +66,36 @@ class Piece{
   	}
   
 }
+
+
+class Pyramid extends Piece {
+  constructor(startingRotation, coordX, coordY) {
+
+    super(startingRotation, coordX, coordY, [true, false, false, true]);
+
+  }
+
+  //the laser direction represents which side the laser is hitting(sides:1,2,3,4).
+  //returns true if the peice is destroyed
+  isDestroyed(laserDirection) {
+
+    laserDirection -= 1;
+    if (this.sides[laserDirection]) return false;
+
+    else return true;
+
+  }
+//returns the direction the laser will continue to project after it bounces of the mirror 
+  reflectLaser(laserDirection) {
+    let index = laserDirection - 1;
+    
+    if (!this.isDestroyed(laserDirection)) {
+      
+			if(this.sides[(index + 1) % 4]) return ((index + 1) % 4) + 1;
+      
+      else return  index - 1 === -1 ? 4 : index; 
+      
+      
+    }
+  }
+
