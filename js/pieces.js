@@ -1,3 +1,16 @@
+/*
+          Piece 
+	  
+0 deg      side 1     90 deg
+	_____________
+       |             |
+side 4 |             | side 2
+       |             |
+        _____________
+270 deg     side 3    180 deg
+*/
+
+
 class Piece{
 //specify the starting position, rotation(0,90,180,270) of the Piece.
 //the sides parameter is supposed to get an array of size 4 filled with booleans true or false that represent 
