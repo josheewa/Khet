@@ -98,3 +98,24 @@ class Pyramid extends Piece {
     }
   }
 
+class Anubis extends Piece{
+	constructor(startingRotation,coordX,coordY){
+  		super(startingRotation,coordX,coordY,[true,false,false,false]);
+  	}
+  
+ 	isDestroyed(laserDirection) {
+
+    		laserDirection -= 1;
+    		if (this.sides[laserDirection]) return false;
+
+    		else return true;
+
+  	}
+  
+  	reflectLaser(laserDirection){
+  		if(!this.isDestroyed(laserDirection)){
+    		//0 represents that the laser just stops, and does not reflect anywhere.
+    		return 0;
+    		}
+  	}
+}
