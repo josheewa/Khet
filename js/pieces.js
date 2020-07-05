@@ -119,3 +119,17 @@ class Anubis extends Piece{
     		}
   	}
 }
+
+class Pharaoh extends Piece{
+	constructor(startingRotation,coordX,coordY){
+  		super(startingRotation,coordX,coordY,[false,false,false,false]);
+  	}
+  	//Pharaoh is always destroyed if hit by the laser
+  	isDestroyed(laserDirection){
+  		return true;
+  	}
+  
+  	reflectLaser(laserDirection){
+  		return 0;
+  	}
+}
