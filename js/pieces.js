@@ -133,3 +133,31 @@ class Pharaoh extends Piece{
   		return 0;
   	}
 }
+
+class Scarab extends Piece{
+	constructor(startingRotation,coordX,coordY){
+  	super(startingRotation,coordX,coordY,[true,true,true,true]);
+  	}
+  
+  	isDestroy(laserDirection){
+  		return false;
+  	}
+  
+  	reflectLaser(laserDirection){
+  		laserDirection -= 1;
+    		let mirrors = null;
+		
+  		if(this.rot === 0 || this.rot === 180){
+    			mirrors = [[1,4],[3,2],[3,2],[1,4]];
+      
+    	
+    		}
+    
+    		else if(this.rot === 90 || this.rot === 270){
+    			mirrors = [[1,2],[1,2],[3,4],[3,4]];
+    
+    		}
+    
+    	return mirrors[laserDirection][(laserDirection + 1) % 2]
+  }
+}
