@@ -161,3 +161,18 @@ class Scarab extends Piece{
     	return mirrors[laserDirection][(laserDirection + 1) % 2]
   }
 }
+
+class Sphinx{
+
+	constructor(startingRotation,coordX,coordY){
+  		super(startingRotation,coordX,coordY,[false,false,false,false]);
+  	}
+  
+  	isDestroyed(laserDirection){
+  		return false;
+  	}
+  
+  	reflectLaser(laserDirection){
+  		return 0;
+  	}
+}
