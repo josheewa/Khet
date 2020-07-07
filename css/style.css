@@ -3,6 +3,12 @@
  	margin: auto auto;
  	text-align: center;
 }
+.hidden {
+ display: none;
+}
+.visible {
+ display: block;
+}
 #title {
 	/*text-align: center;*/
 	font-variant: small-caps;
