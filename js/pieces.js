@@ -15,7 +15,7 @@ class Piece{
 //specify the starting position, rotation(0,90,180,270) of the Piece.
 //the sides parameter is supposed to get an array of size 4 filled with booleans true or false that represent 
 //if a laser can hit that side without the piece getting destroyed.
-	constructor(startingRotation,coordX,coordY,sides){
+	constructor(startingRotation,coordX,coordY,player,sides){
   
   		this.rot = startingRotation % 360;
     		this.coordX = coordX;
@@ -24,6 +24,9 @@ class Piece{
     		//the true in the sides array represent the sides that can be hit with
     		//a laser without the piece being destroyed
     		this.sides = sides;
+		
+		//Which players piece
+		this.player = player;
     
     		//rotates the array to the right so the sides faced there starting rotation
    		 for(let i = this.rot;i > 0;i-=90){
@@ -77,15 +80,19 @@ class Piece{
       			this.coordX -= 1;
       		}
   	}
+	
+	get player(){
+		return this.player;
+	}
   
 }
 
 
 class Pyramid extends Piece {
 	
-	constructor(startingRotation, coordX, coordY) {
+	constructor(startingRotation, coordX, coordY,player) {
 
-    		super(startingRotation, coordX, coordY, [true, false, false, true]);
+    		super(startingRotation, coordX, coordY, player ,[true, false, false, true]);
 
   	}
 
@@ -113,8 +120,8 @@ class Pyramid extends Piece {
 }
 
 class Anubis extends Piece{
-	constructor(startingRotation,coordX,coordY){
-  		super(startingRotation,coordX,coordY,[true,false,false,false]);
+	constructor(startingRotation,coordX,coordY,player){
+  		super(startingRotation,coordX,coordY, player ,[true,false,false,false]);
   	}
   
  	isDestroyed(laserDirection) {
@@ -136,8 +143,8 @@ class Anubis extends Piece{
 
 class Pharaoh extends Piece{
 	
-	constructor(startingRotation,coordX,coordY){
-  		super(startingRotation,coordX,coordY,[false,false,false,false]);
+	constructor(startingRotation,coordX,coordY,player){
+  		super(startingRotation,coordX,coordY,player,[false,false,false,false]);
   	}
   	//Pharaoh is always destroyed if hit by the laser
   	isDestroyed(laserDirection){
@@ -151,8 +158,8 @@ class Pharaoh extends Piece{
 
 class Scarab extends Piece{
 	
-	constructor(startingRotation,coordX,coordY){
-  		super(startingRotation,coordX,coordY,[true,true,true,true]);
+	constructor(startingRotation,coordX,coordY,player){
+  		super(startingRotation,coordX,coordY,player,[true,true,true,true]);
   	}
   
   	isDestroy(laserDirection){
@@ -180,8 +187,8 @@ class Scarab extends Piece{
 
 class Sphinx extends Piece{
 
-	constructor(startingRotation,coordX,coordY){
-  		super(startingRotation,coordX,coordY,[false,false,false,false]);
+	constructor(startingRotation,coordX,coordY,player){
+  		super(startingRotation,coordX,coordY,player,[false,false,false,false]);
   	}
   
   	isDestroyed(laserDirection){
