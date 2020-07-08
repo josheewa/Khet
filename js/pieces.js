@@ -98,18 +98,19 @@ class Pyramid extends Piece {
 
     		else return true;
 
-  }
+  	}
 //returns the direction the laser will continue to project after it bounces of the mirror 
-  reflectLaser(laserDirection) {
-  	let index = laserDirection - 1;
+ 	reflectLaser(laserDirection) {
+  		let index = laserDirection - 1;
     
-    	if (!this.isDestroyed(laserDirection)) {
+    		if (!this.isDestroyed(laserDirection)) {
       
-		if(this.sides[(index + 1) % 4]) return ((index + 1) % 4) + 1;
+			if(this.sides[(index + 1) % 4]) return ((index + 1) % 4) + 1;
       
-      		else return  index - 1 === -1 ? 4 : index;    
-    }
-  }
+      			else return  index - 1 === -1 ? 4 : index;    
+    		}
+  	}
+}
 
 class Anubis extends Piece{
 	constructor(startingRotation,coordX,coordY){
@@ -134,6 +135,7 @@ class Anubis extends Piece{
 }
 
 class Pharaoh extends Piece{
+	
 	constructor(startingRotation,coordX,coordY){
   		super(startingRotation,coordX,coordY,[false,false,false,false]);
   	}
@@ -148,8 +150,9 @@ class Pharaoh extends Piece{
 }
 
 class Scarab extends Piece{
+	
 	constructor(startingRotation,coordX,coordY){
-  	super(startingRotation,coordX,coordY,[true,true,true,true]);
+  		super(startingRotation,coordX,coordY,[true,true,true,true]);
   	}
   
   	isDestroy(laserDirection){
@@ -171,8 +174,8 @@ class Scarab extends Piece{
     
     		}
     
-    	return mirrors[laserDirection][(laserDirection + 1) % 2]
-  }
+    		return mirrors[laserDirection][(laserDirection + 1) % 2]
+  	}
 }
 
 class Sphinx extends Piece{
