@@ -58,11 +58,24 @@ class Piece{
   	}
   
   	set x(increment){
-  		this.coordX += increment;
+  		if(increment === 1){
+      			this.coordX += 1;
+      		}
+      
+      		else if(increment === -1){
+      			this.coordX -= 1;
+      		}
   	}
   
   	set y(increment){
-  		this.coordY += increment;
+		
+  		if(increment === 1){
+      			this.coordX += 1;
+      		}
+      
+      		else if(increment === -1){
+      			this.coordX -= 1;
+      		}
   	}
   
 }
