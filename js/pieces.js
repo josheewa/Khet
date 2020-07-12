@@ -1,3 +1,4 @@
+"use strict"
 class Piece{
 //specify the starting position, rotation(0,90,180,270) of the Piece.
 //the sides parameter is supposed to get an array of size 4 filled with booleans true or false that represent 
