@@ -141,6 +141,88 @@ class Board{
     
     
   }
+	
+  shineLaser(player){
+	  
+	let laserDirection = null;
+    	let laserCoordX;
+    	let laserCoordY;
+    
+  	let laserGrid = new Array(10);
+    	laserGrid.fill(new Array(8));
+    
+    	laserGrid.forEach((x) => {
+    		x.fill("?");
+    	});
+    
+    	if(player === 1){
+    		laserDirection = (this.board[0][0].rotation / 90) + 1;
+      		laserCoordX = 0;
+      		laserCoordY = 0;
+    	}
+    
+    	else if(player === 2){
+    
+    		laserDirection = (this.board[9][7].rotation / 90) + 1;
+      		laserCoordX = 9;
+      		laserCoordY = 7;
+    	}
+    
+    	else{
+    		return "No Such Player Exists";
+    	}
+    
+    while(laserDirection != 0 && laserDirection != -1){
+    	
+	switch(laserDirection){
+      		case 1:
+        		laserCoordY -= 1;
+          		break;
+			
+        	case 2:
+        		laserCoordX += 1;
+          		break;
+         	case 3:
+         		laserCoordY += 1;
+          		break;
+			
+         	case 4: 
+         		laserCoordX -= 1;
+          		break;
+      	}
+      
+      	if(laserCoordX < 0 || laserCoordX > 9 || laserCoordY < 0 
+    		|| laserCoordY > 7){
+        
+      		laserDirection = -1;
+        
+      	}
+      
+      
+      	else if(this.board[laserCoordX][laserCoordY] instanceof Piece){
+      
+      		let piece = this.board[laserCoordX][laserCoordY];
+        
+        	if(piece.isDestroyed(laserDirection)){
+        		laserDirection = 0;
+          
+          		this.board[laserCoordX][laserCoordY] = 0;
+          
+        	}
+        
+        	else{
+        		laserDirection = piece.reflectLaser(laserDirection);
+          
+        	}
+      	}
+      	if(laserDirection != -1)
+      		laserGrid[laserCoordX][laserCoordY] = laserDirection;
+      
+    }
+    
+    return laserGrid;
+    
+  }
   
 
     
