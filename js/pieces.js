@@ -36,7 +36,10 @@ class Piece{
       			this.rot = this.rot === 0 ? 270 : this.rot - 90;
     		}
   	}
-  
+  	
+	get rotation(){
+		return this.rot;
+	}
 	
 	get player(){
 		return this.player;
