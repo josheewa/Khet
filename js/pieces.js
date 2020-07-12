@@ -144,7 +144,7 @@ class Scarab extends Piece{
 
 class Sphinx extends Piece{
 
-	constructor(startingRotation,coordX,coordY,player){
+	constructor(startingRotation,player){
   		super(startingRotation,player,[false,false,false,false]);
   	}
   
