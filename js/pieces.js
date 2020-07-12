@@ -42,7 +42,7 @@ class Piece{
 		return this.rot;
 	}
 	
-	get player(){
+	get getPlayer(){
 		return this.player;
 	}
   
