@@ -6,12 +6,23 @@ class Board{
   //2 = IMHOTEP
   //3 = Dynasty
 	constructor(configuration){
+
   	this.board = new Array(10);
-    	this.board.fill(new Array(8));
+    for(let x = 0; x < this.board.length;x++) 
+    	this.board[x] = new Array(8);
     
     	this.board.forEach((x) => {
-    		x.fill(0);
+    		x.fill("0");
     	});
+      
+      switch(configuration){
+      	case 1:
+        	this.classicBoardSetup();
+          break;
+         default:
+         	console.log("Setup does not exist");
+         	
+      }
     	
     
     
@@ -224,7 +235,41 @@ class Board{
     
   }
   
-
+	classicBoardSetup(){
+  
+  	this.board[0][0] = new Sphinx(180,1);
+    this.board[4][0] = new Anubis(180,1);
+    this.board[5][0] = new Pharaoh(180,1);
+    this.board[6][0] = new Anubis(180,1);
+    this.board[7][0] = new Pyramid(180,1);
+    this.board[2][1] = new Pyramid(270,1);
+    this.board[3][2] = new Pyramid(0,2);
+    this.board[0][3] = new Pyramid(90,1);
+    this.board[2][3] = new Pyramid(270,2);
+    this.board[4][3] = new Scarab(0,1);
+    this.board[5][3] = new Scarab(90,1);
+    this.board[7][3] = new Pyramid(180,1);
+    this.board[9][3] = new Pyramid(0,2);
+    this.board[0][4] = new Pyramid(180,1);
+    this.board[2][4] = new Pyramid(0,2);
+    this.board[4][4] = new Scarab(270,2);
+    this.board[5][4] = new Scarab(180,2);
+    this.board[7][4] = new Pyramid(90,1);
+    this.board[9][4] = new Pyramid(270,2);
+    this.board[6][5] = new Pyramid(180,1);
+    this.board[7][6] = new Pyramid(90,2);
+    this.board[2][7] = new Pyramid(0,2);
+    this.board[3][7] = new Anubis(0,2);
+    this.board[4][7] = new Pharaoh(0,2);
+    this.board[3][7] = new Anubis(0,2);
+    this.board[9][7] = new Sphinx(0,2);    
+     
+  }
+  
+  get getBoard(){
+  	return this.board.concat();
+    
+  }
     
   
 }
