@@ -45,8 +45,8 @@
         });
         var tiles = document.getElementById("player2").querySelectorAll(".square");
         tiles.forEach((item,index) =>{
-            item.setAttribute(X, index % 10);
-            item.setAttribute(Y, yCoord);
+            item.setAttribute('X', index % 10);
+            item.setAttribute('Y', yCoord);
             if(index % 10 === 0 ) yCoord++;
         });
     </script>
