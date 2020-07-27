@@ -38,16 +38,22 @@
     </body>
     
     <script>
-        var yCoord = 0;
-        var tiles = document.getElementById("player1").querySelectorAll(".square");
-        tiles.forEach((item,index) =>{
-            item.setAttribute("id","tile" + index);
+        let yCoord = 9;
+        
+        var player1Tiles = document.getElementById("player1").querySelectorAll(".square");
+        
+        player1Tiles.forEach((item,index) =>{
+            if(index % 10 === 0 ) yCoord--;  
+            item.setAttribute('X', 9 - (index % 10); 
+            item.setAttribute('Y', (yCoord % 9) - 1);   
         });
-        var tiles = document.getElementById("player2").querySelectorAll(".square");
-        tiles.forEach((item,index) =>{
-            item.setAttribute('X', index % 10);
-            item.setAttribute('Y', yCoord);
-            if(index % 10 === 0 ) yCoord++;
+        
+        yCoord = 0;
+        var player2Tiles = document.getElementById("player2").querySelectorAll(".square");
+        player2Tiles.forEach((item,index) =>{
+            if(index % 10 === 0 ) yCoord++;  
+            item.setAttribute('X', index % 10); 
+            item.setAttribute('Y', (yCoord % 9) - 1);   
         });
     </script>
 </html>
