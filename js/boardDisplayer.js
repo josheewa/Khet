@@ -17,3 +17,9 @@ player2Tiles.forEach((item,index) =>{
     item.setAttribute('X', index % 10); 
     item.setAttribute('Y', (yCoord % 9) - 1);   
 });
+
+
+
+class BoardDisplayer{
+        constructor
+}
