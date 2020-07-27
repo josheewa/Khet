@@ -20,6 +20,6 @@ player2Tiles.forEach((item,index) =>{
 
 
 
-class BoardDisplayer{
+/*class BoardDisplayer{
         constructor
-}
+}*/
