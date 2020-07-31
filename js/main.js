@@ -25,6 +25,8 @@ let yCoord1 = 9;
         
 }
 
+main();
+
 
 
 
