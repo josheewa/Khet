@@ -3,8 +3,11 @@
 function main(){
 let yCoord1 = 9;
         
-        var player1Tiles = document.getElementById("player1").querySelectorAll(".square");
-        var player2Tiles = document.getElementById("player2").querySelectorAll(".square");
+        var player1 = document.getElementById("player1");
+        var player2 = document.getElementById("player2");
+        
+        var player1Tiles = player2.querySelectorAll(".square");
+        var player2Tiles = player2.querySelectorAll(".square");
         
         player1Tiles.forEach((item,index) =>{
                 if(index % 10 === 0 ) yCoord1--;  
