@@ -1,3 +1,4 @@
+"use strict"
 let yCoord = 9;
         
 var player1Tiles = document.getElementById("player1").querySelectorAll(".square");
