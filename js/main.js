@@ -3,7 +3,7 @@ function drawBoard() {
 	
 }
 
-var board = new Board(1);
+var board = new khetBoard(1);
 
 
 
