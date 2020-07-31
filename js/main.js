@@ -18,6 +18,8 @@ player2Tiles.forEach((item,index) =>{
     item.setAttribute('Y', (yCoord % 9) - 1);   
 });
 
+var khetBoard = new Board(1);
+
 
 
 
