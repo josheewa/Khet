@@ -6,7 +6,7 @@ let yCoord1 = 9;
         var player1 = document.getElementById("player1");
         var player2 = document.getElementById("player2");
         
-        var player1Tiles = player2.getElementsByClassName("square");
+        var player1Tiles = player1.getElementsByTagName("div");
         var player2Tiles = player2.getElementsByClassName("square");
         
         player1Tiles.forEach((item,index) =>{
