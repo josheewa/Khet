@@ -1,4 +1,4 @@
-//"use strict"
+import Board from js/board.js
 
 function main(){
 
