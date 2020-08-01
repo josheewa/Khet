@@ -5,7 +5,7 @@ function main(){
        
         
         
-        var khetBoard = new Board(1);
+       var khetBoard = new Scarab(90,0,0);
         
 }
 
