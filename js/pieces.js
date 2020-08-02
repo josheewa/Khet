@@ -1,5 +1,5 @@
 "use strict"
-class Piece{
+export class Piece{
 //specify the starting position, rotation(0,90,180,270) of the Piece.
 //the sides parameter is supposed to get an array of size 4 filled with booleans true or false that represent 
 //if a laser can hit that side without the piece getting destroyed.
@@ -49,7 +49,7 @@ class Piece{
 }
 
 
-class Pyramid extends Piece {
+export class Pyramid extends Piece {
 	
 	constructor(startingRotation,player) {
 
@@ -80,7 +80,7 @@ class Pyramid extends Piece {
   	}
 }
 
-class Anubis extends Piece{
+export class Anubis extends Piece{
 	constructor(startingRotation,player){
   		super(startingRotation, player ,[true,false,false,false]);
   	}
@@ -102,7 +102,7 @@ class Anubis extends Piece{
   	}
 }
 
-class Pharaoh extends Piece{
+export class Pharaoh extends Piece{
 	
 	constructor(startingRotation,player){
   		super(startingRotation,player,[false,false,false,false]);
@@ -117,7 +117,7 @@ class Pharaoh extends Piece{
   	}
 }
 
-class Scarab extends Piece{
+export class Scarab extends Piece{
 	
 	constructor(startingRotation,coordX,coordY,player){
   		super(startingRotation,player,[true,true,true,true]);
@@ -146,7 +146,7 @@ class Scarab extends Piece{
   	}
 }
 
-class Sphinx extends Piece{
+export class Sphinx extends Piece{
 
 	constructor(startingRotation,player){
   		super(startingRotation,player,[false,false,false,false]);
