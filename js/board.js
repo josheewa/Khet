@@ -1,4 +1,4 @@
-import * as Pieces from "piece.js";
+import * as Pieces from "pieces.js";
 "use strict"
 
 export default class Board{
