@@ -1,3 +1,4 @@
+import * as Pieces from "piece.js";
 "use strict"
 
 export default class Board{
