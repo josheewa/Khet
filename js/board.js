@@ -1,6 +1,6 @@
 "use strict"
 
-export class Board{
+export default class Board{
 	//configuration can be 1,2,3
   //1 = Classic
   //2 = IMHOTEP
