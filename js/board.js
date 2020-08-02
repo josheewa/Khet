@@ -238,32 +238,32 @@ export default class Board{
   
 	classicBoardSetup(){
   
-  	this.board[0][0] = new Sphinx(180,1);
-    this.board[4][0] = new Anubis(180,1);
-    this.board[5][0] = new Pharaoh(180,1);
-    this.board[6][0] = new Anubis(180,1);
-    this.board[7][0] = new Pyramid(180,1);
-    this.board[2][1] = new Pyramid(270,1);
-    this.board[3][2] = new Pyramid(0,2);
-    this.board[0][3] = new Pyramid(90,1);
-    this.board[2][3] = new Pyramid(270,2);
-    this.board[4][3] = new Scarab(0,1);
-    this.board[5][3] = new Scarab(90,1);
-    this.board[7][3] = new Pyramid(180,1);
-    this.board[9][3] = new Pyramid(0,2);
-    this.board[0][4] = new Pyramid(180,1);
-    this.board[2][4] = new Pyramid(0,2);
-    this.board[4][4] = new Scarab(270,2);
-    this.board[5][4] = new Scarab(180,2);
-    this.board[7][4] = new Pyramid(90,1);
-    this.board[9][4] = new Pyramid(270,2);
-    this.board[6][5] = new Pyramid(180,1);
-    this.board[7][6] = new Pyramid(90,2);
-    this.board[2][7] = new Pyramid(0,2);
-    this.board[3][7] = new Anubis(0,2);
-    this.board[4][7] = new Pharaoh(0,2);
-    this.board[3][7] = new Anubis(0,2);
-    this.board[9][7] = new Sphinx(0,2);    
+  	this.board[0][0] = new Pieces.Sphinx(180,1);
+    this.board[4][0] = new Pieces.Anubis(180,1);
+    this.board[5][0] = new Pieces.Pharaoh(180,1);
+    this.board[6][0] = new Pieces.Anubis(180,1);
+    this.board[7][0] = new Pieces.Pyramid(180,1);
+    this.board[2][1] = new Pieces.Pyramid(270,1);
+    this.board[3][2] = new Pieces.Pyramid(0,2);
+    this.board[0][3] = new Pieces.Pyramid(90,1);
+    this.board[2][3] = new Pieces.Pyramid(270,2);
+    this.board[4][3] = new Pieces.Scarab(0,1);
+    this.board[5][3] = new Pieces.Scarab(90,1);
+    this.board[7][3] = new Pieces.Pyramid(180,1);
+    this.board[9][3] = new Pieces.Pyramid(0,2);
+    this.board[0][4] = new Pieces.Pyramid(180,1);
+    this.board[2][4] = new Pieces.Pyramid(0,2);
+    this.board[4][4] = new Pieces.Scarab(270,2);
+    this.board[5][4] = new Pieces.Scarab(180,2);
+    this.board[7][4] = new Pieces.Pyramid(90,1);
+    this.board[9][4] = new Pieces.Pyramid(270,2);
+    this.board[6][5] = new Pieces.Pyramid(180,1);
+    this.board[7][6] = new Pieces.Pyramid(90,2);
+    this.board[2][7] = new Pieces.Pyramid(0,2);
+    this.board[3][7] = new Pieces.Anubis(0,2);
+    this.board[4][7] = new Pieces.Pharaoh(0,2);
+    this.board[3][7] = new Pieces.Anubis(0,2);
+    this.board[9][7] = new Pieces.Sphinx(0,2);    
      
   }
   
